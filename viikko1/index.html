@@ -5,12 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cinema Festival</title>
+    <style>
+        .banner {
+            background-color: #FFD700;
+            color: #002366;
+        }
+
+        .slogan {
+            background-color: #B30015;
+            color: #FFFFFF;
+        }
+
+        .nav-bg {
+            background-color: #008080;
+            color: #FFFFFF;
+        }
+
+        .about-bg {
+            background-color: #CCCCCC;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <header class="bg-blue-900 text-white text-center py-2">
+        <h1 class="text-2xl">Cinema Festival</h1>
+    </header>
+
+    <nav class="nav-bg py-2">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="#" class="hover:text-blue-900">Home</a></li>
+            <li><a href="#" class="hover:text-blue-900">Schedule</a></li>
+            <li><a href="#" class="hover:text-blue-900">Tickets</a></li>
+            <li><a href="#" class="hover:text-blue-900">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="banner py-4">
+        <h2 class="text-2xl">Welcome to Cinema Festival!</h2>
+        <p class="text-lg">Join us for a celebration of the finest films in our beautiful city.</p>
+    </section>
+
+    <section class="about-bg py-4">
+        <div class="container mx-auto p-4">
+            <h2 class="text-2xl">About the Event</h2>
+            <p class="text-lg">Get ready to immerse yourself in a world of cinematic excellence.</p>
+        </div>
+    </section>
+
+    <section class="slogan py-2">
+        <h3 class="text-xl">Experience the Magic of Cinema</h3>
+    </section>
 </body>
 
 </html>

@@ -9,7 +9,15 @@ module.exports = {
   },
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        aleksiblack: '#000000',
+        aleksigreen: '#2d996d',
+        aleksipurple: '#876484',
+        aleksidark: '#153640',
+        aleksicharcoal: '#0d1516',
+      },
+},
   },
   plugins: [],
 }

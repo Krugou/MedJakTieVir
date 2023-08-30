@@ -1,0 +1,22 @@
+
+
+@tailwind base;
+@layer base {
+  
+ h1 {
+    @apply text-4xl font-bold;
+}
+    h2 {
+        @apply text-3xl font-bold;
+    }
+    h3 {
+        @apply text-2xl font-bold;
+    }
+}
+@tailwind components;
+@layer components {
+   .btn {
+  @apply hover:bg-lime-600 hover:text-red-700 px-4 py-2 rounded-md bg-blue-500 text-white transition-all duration-1000 ease-in-out;
+}
+}
+@tailwind utilities;

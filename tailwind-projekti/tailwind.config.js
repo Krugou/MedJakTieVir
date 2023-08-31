@@ -10,6 +10,9 @@ module.exports = {
 
   theme: {
     extend: {
+      backgroundImage:{
+        'aurora': "url('./img/aurora.png')",
+      },
       colors: {
         aleviolet: '#464660',
         alegreen: '#2d996d',

@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        aleblack: '#000000',
+        aleviolet: '#464660',
         alegreen: '#2d996d',
         alepurple: '#876484',
         aledark: '#153640',

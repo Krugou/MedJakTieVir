@@ -4,36 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Example</title>
+    <title>Kirkenes Film Festival</title>
     <link rel="stylesheet" href="../dist/output.css">
 
 </head>
 
 <body>
-    <header class="bg-gray-800 text-white py-4">
-        <h1 class="text-3xl font-bold text-center">Welcome to my website</h1>
-    </header>
+<header class="flex justify-between items-center">
+    <a href="./index.html" class="logo">Kirkenes Film Festival</a>
+    <button class="hamburger flex flex-col justify-center items-center" type="button" aria-label="Menu">
+        <span class="bar h-1 w-6 bg-gray-900 rounded-full mb-1"></span>
+        <span class="bar h-1 w-6 bg-gray-900 rounded-full mb-1"></span>
+        <span class="bar h-1 w-6 bg-gray-900 rounded-full"></span>
+    </button>
+    <nav class="nav hidden md:block">
+        <ul class="flex flex-row">
+            <li class="mybutton">item 1</li>
+            <li class="mybutton">item 2</li>
+            <li class="mybutton">item 3</li>
+        </ul>
+    </nav>
+</header>
 
 
     <main class="container mx-auto py-8">
-        <h2>h2</h2>
-        <h3 class="bg-orange-600 w-[400px]">h3</h3>
-        <div class=" btn ">Nappula</div>
-        <section class="grid grid-cols-3 gap-4">
-            <div class="bg-gray-200 p-4">
-                <h2 class="text-xl font-bold">Section 1</h2>
-                <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eget
-                    consectetur bibendum, velit elit lacinia nunc, eu bibendum sapien elit vel nisl. Nulla facilisi.
-                </p>
-            </div>
-            <div class="bg-gray-200 p-4">
-                <h2 class="text-xl font-bold">Section 2</h2>
-                <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam eget
-                    consectetur bibendum, velit elit lacinia nunc, eu bibendum sapien elit vel nisl. Nulla facilisi.
-                </p>
-            </div>
-        </section>
+        <section></section>
+
+
     </main>
 </body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+</script>
 
 </html>

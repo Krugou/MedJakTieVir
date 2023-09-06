@@ -2,7 +2,7 @@
 
 // Server URL below must point to your server, localhost works for local development/testing
 //const socket = io('http://localhost:3000');
-const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');'
+const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/'); ';;
 
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
@@ -14,7 +14,8 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
 socket.on('chat message', (data) => {
     const item = document.createElement('li');
+    // add tailwind classes to the list item
+    item.classList.add('bg-white', 'rounded', 'p-2', 'm-2', 'shadow', 'text-gray-800');
     item.innerHTML = data;
-    console.log(data);
     document.getElementById('messages').appendChild(item);
 });

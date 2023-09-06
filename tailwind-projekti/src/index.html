@@ -10,7 +10,14 @@
 </head>
 
 <body>
+
     <header class="flex justify-between items-center">
+        <audio>
+            <source src="../dist/ogg/festivaltunes.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="playButton">Play festival theme</button>
+
         <a href="./index.html"
             class="logo text-2xl font-bold text-gray-900 hover:text-gray-900 active:text-red-500">Kirkenes
             Film Festival</a>
@@ -109,6 +116,24 @@
         hamburger.classList.toggle('open');
         nav.classList.toggle('open');
     });
+    const playButtonFunction = () => {
+        const playButton = document.querySelector('#playButton');
+
+        playButton.addEventListener('click', () => {
+
+            const audio = document.querySelector('audio');
+            audio.play();
+            playButton.textContent = 'Pause festival theme';
+            playButton.addEventListener('click', () => {
+                audio.pause();
+                playButton.textContent = 'Play';
+                playButtonFunction();
+            });
+        });
+    };
+    playButtonFunction();
+
+
 </script>
 
 </html>

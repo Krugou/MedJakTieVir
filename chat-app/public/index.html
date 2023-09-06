@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
     <script defer src="chat.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Chat app Aleksi Nokelainen</title>
 </head>
 
-<body>
-    <form>
-        <input type="text" id="m">
-        <button type="submit">Send my message</button>
-    </form>
-    <ul id="messages"></ul>
+<body class="flex flex-col justify-center items-center">
+    <header class=" m-5 text-2xl font-bold text-gray-900 hover:text-gray-900 active:text-red-500">Remember to say hello to other folks in the void.</header>
+    <main class=" m-5 w-full max-w-lg">
+        <form class=" m-5 flex flex-col items-center">
+            <input type="text" id="m" class="border border-gray-400 rounded-md py-2 px-4 mb-4 w-full md:w-1/2 lg:w-1/3">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Send my
+                message</button>
+        </form>
+        <ul id="messages" class="bg-white m-5 shadow-md rounded-md p-4"></ul>
+    </main>
 </body>
 
 </html>

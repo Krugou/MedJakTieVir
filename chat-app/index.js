@@ -10,14 +10,14 @@ const port = 3000;
 app.use(express.static('public'));
 
 io.on('connection', (socket) => {
-    console.log('Oh my god its full of stars', socket.id);
+    console.log(socket.id, ' has entered the building');
 
     socket.on('disconnect', () => {
-        console.log('Elvis has left the building', socket.id);
+        console.log(socket.id, ' has left the building');
     });
 
     socket.on('chat message', (msg) => {
-        console.log('message: ', msg, "Don't worry, I'm not a robot. I'm just a highly advanced toaster trying to blend in with the humans.");
+        console.log('user: ', socket.id, 'send this: "', msg, '" to the server');
         io.emit('chat message', msg);
     });
 });

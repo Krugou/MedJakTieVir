@@ -3,6 +3,8 @@ module.exports = {
   content: [
     './public/**/*.html',
     './public/**/*.js',
+    './node_modules/flowbite/**/*.js'
+
   ],
   corePlugins: {
     // ...
@@ -22,5 +24,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ]
 };

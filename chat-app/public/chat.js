@@ -1,8 +1,8 @@
 'use strict';
 
 // Server URL below must point to your server, localhost works for local development/testing
-// const socket = io('http://localhost:3000');
-const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
+const socket = io('http://localhost:3000');
+// const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
 const roomSelect = document.getElementById('room');
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ roomSelect.addEventListener('change', (event) => {
     socket.emit('get messages', newRoom);
 });
 socket.on('chat message', (data) => {
-    console.log(data);
+    // console.log(data);
     const currentRoom = roomSelect.value;
     if (data.room === currentRoom) {
         const item = document.createElement('li');

@@ -15,12 +15,21 @@
     <header class=" m-5 text-2xl font-bold text-gray-900 hover:text-gray-900 active:text-red-500">Remember to say hello
         to other folks in the void.</header>
     <main class=" m-5 w-full max-w-lg">
+
         <form class=" m-5 flex flex-col items-center">
+            <select title="selector" name="room" id="room"
+                class="block w-full py-2 px-3 border border-gray-400 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="room1">The Room of Requirement</option>
+                <option value="room2">The Batcave</option>
+                <option value="room3">The Fortress of Solitude</option>
+            </select>
             <label for="username" class="text-gray-900">Username</label>
             <input type="text" id="username"
-                class="border border-gray-400 rounded-md py-2 px-4 mb-4 w-full md:w-1/2 lg:w-1/3">
+                class="border border-gray-400 rounded-md py-2 px-4 mb-4 w-full md:w-1/2 lg:w-1/3" required
+                placeholder="Enter your username">
             <label for="m" class="text-gray-900">Message</label>
-            <input type="text" id="m" class="border border-gray-400 rounded-md py-2 px-4 mb-4 w-full md:w-1/2 lg:w-1/3">
+            <input type="text" id="m" class="border border-gray-400 rounded-md py-2 px-4 mb-4 w-full md:w-1/2 lg:w-1/3"
+                required placeholder="Enter your Message">
             <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Send my
                 message</button>
         </form>

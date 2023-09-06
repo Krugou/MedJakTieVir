@@ -19,10 +19,10 @@ io.on('connection', (socket) => {
     //     socket.username = username;
     //     console.log(socket.id, ' has set username to ', username);
     // });
-    socket.on('chat message', (msg) => {
-        console.log('user: ', socket.id, 'send this: "', msg, '" to the server');
-        io.emit('chat message', msg);
-    });
+    socket.on('chat message', (data) => {
+    console.log(`message: ${data.message}, username: ${data.username}`);
+    io.emit('chat message', `${data.username}: ${data.message}`);
+  });
 });
 
 http.listen(port, () => {

@@ -7,12 +7,13 @@ const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     const inp = document.getElementById('m');
-    socket.emit('chat message', inp.value);
+    const username = document.getElementById('username').value; // get the username from an input field
+    socket.emit('chat message', {message: inp.value, username: username}); // emit an object with the message and username
     inp.value = '';
 });
 
-socket.on('chat message', (msg) => {
+socket.on('chat message', (data) => {
     const item = document.createElement('li');
-    item.innerHTML = msg;
+    item.innerText = `${data.username}: ${data.message}`;
     document.getElementById('messages').appendChild(item);
 });

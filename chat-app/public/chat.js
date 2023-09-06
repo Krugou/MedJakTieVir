@@ -15,7 +15,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
 });
 roomSelect.addEventListener('change', (event) => {
     const newRoom = event.target.value;
-    const currentRoom = document.getElementById('room').value; // get the room from a select field
+    const currentRoom = roomSelect.value; // get the room from a select field
     document.getElementById('messages').innerHTML = '';
     socket.emit('leave room', currentRoom);
     socket.emit('join room', newRoom);
@@ -34,12 +34,12 @@ socket.on('chat message', (data) => {
 });
 // join the socket to a specific room
 socket.on('connect', () => {
-    const currentRoom = document.getElementById('room').value; // get the room from a select field
+    const currentRoom = roomSelect.value; // get the room from a select field
     socket.emit('join room', currentRoom);
 });
 
 // leave the socket from a specific room
 socket.on('disconnect', () => {
-    const currentRoom = document.getElementById('room').value; // get the room from a select field
+    const currentRoom = roomSelect.value; // get the room from a select field
     socket.emit('leave room', currentRoom);
 });

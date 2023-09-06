@@ -1,8 +1,8 @@
 'use strict';
 
 // Server URL below must point to your server, localhost works for local development/testing
-const socket = io('http://localhost:3000');
-// const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
+// const socket = io('http://localhost:3000');
+const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
 const roomSelect = document.getElementById('room');
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();

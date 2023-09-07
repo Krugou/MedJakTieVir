@@ -1,9 +1,12 @@
 'use strict';
 
+
 // Server URL below must point to your server, localhost works for local development/testing
-// const socket = io('http://localhost:3000');
-const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
+const socket = io('http://192.168.52.1:3000');
+// const socket = io('https://aleksinmasiina.northeurope.cloudapp.azure.com/');
 const roomSelect = document.getElementById('room');
+let forgetUsernameClicked = false;
+
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     const currentRoom = roomSelect.value;
@@ -22,6 +25,9 @@ roomSelect.addEventListener('change', (event) => {
     socket.emit('get messages', newRoom);
 });
 socket.on('chat message', (data) => {
+    if (localStorage.getItem('chatappusername')) {
+        document.getElementById('username').value = localStorage.getItem('chatappusername');
+    }
     // get username from local storage
     const chatappusername = localStorage.getItem('chatappusername');
     const currentRoom = roomSelect.value;
@@ -37,6 +43,8 @@ socket.on('chat message', (data) => {
         item.innerHTML = `${data.username}: ${data.message}`;
         document.getElementById('messages').appendChild(item);
         localStorage.setItem('chatappusername', data.username);
+        forgetUsernameButton = false;
+
 
     } else {
         // console.log('Message for another room');
@@ -53,6 +61,23 @@ socket.on('disconnect', () => {
     const currentRoom = roomSelect.value; // get the room from a select field
     socket.emit('leave room', currentRoom);
 
+});
+const forgetUsernameButton = document.getElementById('forget-username');
+forgetUsernameButton.addEventListener('click', () => {
+    if (!forgetUsernameClicked) {
+        forgetUsernameClicked = true;
+        if (localStorage.getItem('chatappusername')) {
+            localStorage.removeItem('chatappusername');
+        } else {
+            forgetUsernameButton.innerText = 'No username stored';
+            forgetUsernameButton.classList.add('animate-pulse');
+            setTimeout(() => {
+                forgetUsernameButton.innerText = 'Forget username';
+                forgetUsernameButton.classList.remove('animate-pulse');
+            }, 5000);
+        }
+        location.reload();
+    }
 });
 const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

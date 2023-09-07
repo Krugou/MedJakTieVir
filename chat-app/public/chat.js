@@ -22,14 +22,20 @@ roomSelect.addEventListener('change', (event) => {
     socket.emit('get messages', newRoom);
 });
 socket.on('chat message', (data) => {
-    // console.log(data);
     const currentRoom = roomSelect.value;
     if (data.room === currentRoom) {
         const item = document.createElement('li');
         // add tailwind classes to the list item
-        item.classList.add('bg-white', 'rounded', 'p-2', 'm-2', 'shadow', 'text-gray-800');
+        item.classList.add('rounded', 'p-2', 'm-2', 'shadow', 'text-white');
+        if (data.username === document.getElementById('username').value) {
+            item.classList.add('self-end', 'bg-blue-500');
+        } else {
+            item.classList.add('self-start', 'bg-pink-500');
+        }
         item.innerHTML = `${data.username}: ${data.message}`;
         document.getElementById('messages').appendChild(item);
+    } else {
+        console.log('Message for another room');
     }
 });
 // join the socket to a specific room

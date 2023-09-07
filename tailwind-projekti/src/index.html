@@ -122,11 +122,15 @@
         playButton.addEventListener('click', () => {
 
             const audio = document.querySelector('audio');
+            audio.addEventListener('ended', () => {
+                playButton.textContent = 'Play festival theme';
+                playButtonFunction();
+            });
             audio.play();
             playButton.textContent = 'Pause festival theme';
             playButton.addEventListener('click', () => {
                 audio.pause();
-                playButton.textContent = 'Play';
+                playButton.textContent = 'Play festival theme';
                 playButtonFunction();
             });
         });

@@ -11,15 +11,15 @@ app.use(express.static('public'));
 
 io.on('connection', (socket) => {
 
-    console.log(socket.id, ' has entered the building');
+    // console.log(socket.id, ' has entered the building');
     const ip = socket.request.connection.remoteAddress;
     console.log(`Client connected with IP address: ${ip}`);
 
     socket.on('disconnect', () => {
-        console.log(socket.id, ' has left the building');
+        // console.log(socket.id, ' has left the building');
     });
     socket.on('join room', (room) => {
-        console.log(socket.id, ' joined room: ', room);
+        // console.log(socket.id, ' joined room: ', room);
         socket.join(room);
         if (lastMessages) {
             for (const room in lastMessages) {
@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
         }
     });
     socket.on('leave room', (room) => {
-        console.log(socket.id, ' left room: ', room);
+        // console.log(socket.id, ' left room: ', room);
         socket.leave(room);
     });
     socket.on('chat message', (data) => {
@@ -43,7 +43,7 @@ io.on('connection', (socket) => {
             lastMessages[data.room].shift();
         }
         lastMessages[data.room].push(data);
-        console.log(`message: ${data.message}, username: ${data.username}, room: ${data.room}`);
+        // console.log(`message: ${data.message}, username: ${data.username}, room: ${data.room}`);
         io.to(data.room).emit('chat message', {message: data.message, username: data.username, room: data.room});
     });
     socket.on('get messages', (room) => {

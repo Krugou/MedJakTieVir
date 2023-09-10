@@ -3,7 +3,7 @@
 
 // Server URL below must point to your server, localhost works for local development/testing
 // const socket = io('http://192.168.52.1:3000');
-const socket = io('http://aleksinmasiina.northeurope.cloudapp.azure.com/:3000');
+const socket = io('http://aleksinmasiina.northeurope.cloudapp.azure.com/:3001');
 const roomSelect = document.getElementById('room');
 let forgetUsernameClicked = false;
 

@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.html',
-    './src/**/*.js',
+    './public/**/*.html',
+    './public/**/*.js',
   ],
   corePlugins: {
     // ...
@@ -10,7 +10,7 @@ module.exports = {
 
   theme: {
     extend: {
-      backgroundImage:{
+      backgroundImage: {
         'aurora': "url('./img/aurora.png')",
       },
       colors: {

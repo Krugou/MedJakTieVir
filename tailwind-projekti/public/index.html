@@ -14,17 +14,17 @@
     <script defer src="festivalsitechatlogic.js"></script>
 </head>
 
-<body>
+<body class="bg-aleviolet ">
 
     <header class="flex justify-between items-center">
         <audio>
             <source src="./dist/ogg/festivaltunes.ogg" type="audio/ogg">
             Your browser does not support the audio element.
         </audio>
-        <button id="playButton">Play festival theme</button>
+        <button class="p-2 m-4 rounded mybutton mybasetext" id="playButton">Play festival theme</button>
 
         <a href="./index.html"
-            class="logo text-2xl font-bold text-aleviolet hover:text-aleviolet active:text-alepurple">Kirkenes
+            class="logo text-2xl font-bold mybasetext hover:text-aleviolet active:text-alepurple">Kirkenes
             Film Festival</a>
         <button class="hamburger flex flex-col justify-center items-center md:hidden" type="button" aria-label="Menu">
             <span class="bar h-1 w-6 bg-alecharcoal rounded-full mb-1"></span>
@@ -33,134 +33,151 @@
         </button>
         <nav class="nav hidden md:block">
             <ul class="flex flex-row">
-                <li class="mybutton">item 1</li>
-                <li class="mybutton">item 2</li>
-                <li class="mybutton">item 3</li>
+                <li class="mybutton mybasetext" id="about"><a href="#about" class="nav-link ">About</a></li>
+                <li class="mybutton mybasetext" id="schedule"><a href="#schedule" class="nav-link ">Schedule</a></li>
+                <li class="mybutton mybasetext" id="tickets"><a href="#tickets" class="nav-link ">Tickets</a></li>
             </ul>
         </nav>
+
     </header>
 
 
-    <main class="container mx-auto py-8">
+    <main class=" bg-alepurple container mx-auto py-8">
 
-        <section class="bg-cover bg-center bg-aurora h-96 py-20">
+        <section class="bg-cover bg-center bg-aurora border rounded h-96 py-20">
             <div class="container mx-auto text-center">
-                <h2 class="text-4xl font-bold text-white mb-4">Under the Northern Lights</h2>
-                <p class="text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl
-                    vel
-                    tincidunt bibendum, velit sapien luctus velit
+                <h2 class="text-4xl font-bold mybasetext mb-4">Under the Northern Lights</h2>
+                <p class="text-lg mybasetext">Experience the magic of cinema under the shimmering Northern Lights at the
+                    Kirkenes Film Festival. Join us for a mesmerizing journey into the world of film, where storytelling
+                    comes to life amidst the breathtaking Arctic landscape.
                 </p>
-                <button class="bg-alecharcoal hover:bg-alepurple text-white font-bold py-2 px-4 rounded-full mt-4">Buy
+                <button class="bg-alecharcoal hover:bg-alepurple mybasetext font-bold py-2 px-4 rounded-full mt-4">Buy
                     tickets</button>
             </div>
         </section>
-        <section class="py-20">
-            <h3 class="text-2xl font-bold text-center">About the festival</h3>
-            <p class="text-center text-lg mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
-                nisl vel
-                tincidunt bibendum, velit sapien luctus velit, quis
-                luctus ipsum elit nec ipsum. Sed euismod, nisl vel tincidunt bibendum, velit sapien luctus velit, quis
-                luctus ipsum elit nec ipsum.</p>
+        <section class=" border rounded py-20">
+            <h3 class="text-2xl font-bold text-center mybasetext">Discover the Magic of Cinema</h3>
+            <p class="text-center mybasetext text-lg mt-4">Welcome to the Kirkenes Film Festival, where dreams come to
+                life
+                on the silver screen! Our festival is a celebration of storytelling, creativity, and the love for
+                cinema.
+                Join us for a cinematic journey that will transport you to different worlds, make you laugh, cry, and
+                inspire you.</p>
         </section>
-        <section class="flex flex-col md:flex-row items-center md:items-start mb-8">
-            <div class="md:w-1/2">
-                <div class="relative pb-9/16">
-                    <iframe class="absolute inset-0 w-100 h-100"
-                        src="https://www.youtube.com/embed/ac4Fau_VdQI?si=uXw8LZY4rYs4k6xG" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+        <section class=" border rounded flex flex-col md:flex-row justify-center items-center md:items-start mb-8">
+            <div class="md:w-1/2 m-4 ">
+                <h2 class="text-2xl font-bold mybasetext mb-4">Events During the Festival</h2>
+                <ul class="list-disc mybasetext pl-6">
+                    <li class="mybasetext mb-4">Opening Night Gala - Join us for a glamorous red
+                        carpet event.
+                    </li>
+                    <li class="mybasetext mb-4">Screening of Award-Winning Films - Experience
+                        cinematic
+                        excellence.</li>
+                    <li class="mybasetext mb-4">Q&A Sessions with Filmmakers - Get insights from
+                        the creators.
+                    </li>
+                    <li class="mybasetext mb-4">Cinema Under the Stars - Enjoy outdoor screenings.
+                    </li>
+                    <li class="mybasetext mb-4">Film Workshops and Panels - Learn from industry
+                        experts.</li>
+                </ul>
+                <a href="#" class="mybasetext mybutton py-2 px-4 rounded-md ">See
+                    Full
+                    Schedule</a>
+            </div>
+            <div class="relative m-4 pb-9/16 w-full h-96  ">
+                <iframe class="w-full h-full"
+                    src="https://www.youtube.com/embed/Ecl6qzZqxQM?si=jbam-BPnQxKFOhhA&amp;controls=0;autoplay=1;mute=1;loop=1;"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+
+            </div>
+
+        </section>
+        <!-- chat osuus -->
+        <section class="border rounded p-4 ">
+            <button id="theme-toggle" type="button"
+                class="text-alecharcoal dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <form class="m-5 flex flex-col items-center">
+                <select title="selector" name="room" id="room"
+                    class="block w-full py-2 px-3 border border-gray-400 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="room1">Silver Screen Lounge</option>
+                    <option value="room2">Director's Cut Den</option>
+                    <option value="room3">Cinephile's Hangout</option>
+                </select>
+                <div class="flex flex-col md:flex-row md:items-center m-4 p-4">
+                    <label for="username"
+                        class="text-gray-900 m-2 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500">Patron:</label>
+                    <input type="text" id="username"
+                        class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required placeholder="Enter your username">
+                    <label for="m"
+                        class="text-gray-900 m-2 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500">Message:</label>
+
+                    <textarea required id="m" rows="1"
+                        class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Your message..."></textarea>
+                    <button type="submit"
+                        class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
+                        <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                            </path>
+                        </svg>
+                    </button>
 
                 </div>
-            </div>
-            <div class="md:w-1/2 ">
-                <h2 class="text-2xl font-bold mb-4">Title of the Video Goes Here</h2>
-                <p class="text-alecharcoal mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
-                    nisl
-                    vel
-                    tincidunt bibendum, velit sapien luctus velit, quis luctus ipsum elit nec ipsum.</p>
-                <a href="#" class="bg-alepurple hover:bg-alecharcoal text-white py-2 px-4 rounded-md">Watch on
-                    YouTube</a>
-            </div>
+            </form>
+            <ul id="messages"
+                class="flex flex-col bg-white m-4 shadow-lg rounded-md p-4 max-h-80 overflow-y-auto dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:mybasetext dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </ul>
+            <!-- <button id="forget-username" class="bg-red-500 hover:bg-red-600 mybasetext py-2 px-4 rounded-md mt-4">Forget
+                username</button> -->
         </section>
-        <button id="theme-toggle" type="button"
-            class="text-alecharcoal dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-        </button>
-        <form class="m-5 flex flex-col items-center">
-            <select title="selector" name="room" id="room"
-                class="block w-full py-2 px-3 border border-gray-400 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="room1">The Room of Requirement</option>
-                <option value="room2">The Batcave</option>
-                <option value="room3">The Fortress of Solitude</option>
-            </select>
-            <div class="flex flex-col md:flex-row md:items-center m-4 p-4">
-                <label for="username"
-                    class="text-gray-900 m-2 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">Username</label>
-                <input type="text" id="username"
-                    class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required placeholder="Enter your username">
-                <label for="m"
-                    class="text-gray-900 m-2 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">Message</label>
-
-                <textarea required id="m" rows="1"
-                    class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Your message..."></textarea>
-                <button type="submit"
-                    class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
-                    <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
-                        </path>
-                    </svg>
-                </button>
-
-            </div>
-        </form>
-        <ul id="messages"
-            class="flex flex-col bg-white m-4 shadow-lg rounded-md p-4 max-h-80 overflow-y-auto dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        </ul>
-        <button id="forget-username" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md mt-4">Forget
-            username</button>
     </main>
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto flex flex-wrap justify-between">
-            <div class="w-full md:w-1/3 mb-4 md:mb-0">
-                <h3 class="text-lg font-bold mb-2">Column 1</h3>
+    <footer class=" flex justify-center flex-row p-2 text-white">
+        <div class="container  flex  flex-row xs:flex-col  p-2 justify-center">
+            <div class=" w-full md:w-1/3 mb-4 md:mb-0">
+                <h3 class="text-lg font-bold mb-2">Explore</h3>
                 <ul class="list-none">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
+                    <li class="mybutton" id="schedule2"><a href="#">Schedule</a></li>
+                    <li class="mybutton" id="films"><a href="#">Films</a></li>
+                    <li class="mybutton" id="events"><a href="#">Events</a></li>
                 </ul>
             </div>
             <div class="w-full md:w-1/3 mb-4 md:mb-0">
-                <h3 class="text-lg font-bold mb-2">Column 2</h3>
+                <h3 class="text-lg font-bold mb-2">Connect</h3>
                 <ul class="list-none">
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                    <li><a href="#">Link 6</a></li>
+                    <li class="mybutton" id="contact"><a href="#">Contact</a></li>
+                    <li class="mybutton" id="socialmedia"><a href="#">Social Media</a></li>
+                    <li class="mybutton" id="newsletter"><a href="#">Newsletter</a></li>
                 </ul>
             </div>
             <div class="w-full md:w-1/3 mb-4 md:mb-0">
-                <h3 class="text-lg font-bold mb-2">Column 3</h3>
+                <h3 class="text-lg font-bold mb-2">About Us</h3>
                 <ul class="list-none">
-                    <li><a href="#">Link 7</a></li>
-                    <li><a href="#">Link 8</a></li>
-                    <li><a href="#">Link 9</a></li>
+                    <li class="mybutton" id="mission"><a href="#">Mission</a></li>
+                    <li class="mybutton" id="team"><a href="#">Team</a></li>
+                    <li class="mybutton" id="partners"><a href="#">Partners</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+
 
 </body>
 

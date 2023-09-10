@@ -8,13 +8,19 @@
   @apply hover:bg-lime-600 hover:text-red-700 px-4 py-2 rounded-md bg-blue-500 text-white transition-all duration-1000 ease-in-out;
 }
 .mybutton {
-  @apply bg-gray-500 hover:bg-blue-500 border border-gray-500 rounded-md p-4 shadow-md;
+  @apply  max-w-fit m-1 bg-alegreen hover:bg-aledark border  border-aleviolet hover:border-aledark rounded-full p-2.5 shadow-md ;
 }
+.mybasetext {
+  @apply text-white dark:text-gray-100;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
 }
-
+.youtube {
+  @apply   max-w-fit m-0.5 w-full   bg-alegreen hover:bg-aledark border  border-aleviolet hover:border-aledark rounded-full p-1 shadow-md ;
+}
 .bar {
   transition: transform 0.3s ease-in-out;
 }

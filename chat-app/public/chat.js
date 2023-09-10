@@ -43,7 +43,7 @@ socket.on('chat message', (data) => {
         item.innerHTML = `${data.username}: ${data.message}`;
         document.getElementById('messages').appendChild(item);
         localStorage.setItem('chatappusername', data.username);
-        forgetUsernameButton = false;
+        forgetUsernameClicked = false;
 
 
     } else {

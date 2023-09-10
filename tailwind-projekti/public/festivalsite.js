@@ -1,10 +1,11 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
-
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    nav.classList.toggle('open');
+    // Toggle the hidden class on the nav element
+    nav.classList.toggle('hidden');
 });
+
+
 const playButtonFunction = () => {
     const playButton = document.querySelector('#playButton');
 
@@ -32,7 +33,6 @@ const tickets = document.querySelector('#tickets');
 
 
 // silly script to make text flash
-// Get all text elements
 const textElements = document.querySelectorAll('.mybasetext');
 
 // Set the timer to 5 minutes (in milliseconds)

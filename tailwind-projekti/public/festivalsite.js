@@ -62,16 +62,16 @@ document.addEventListener('mousemove', () => {
 fetch("https://api.met.no/weatherapi/locationforecast/2.0/classic?lat=69.7267674114827&lon=30.04699366185751")
     .then(response => response.text())
     .then(data => {
-        const maintitle = document.querySelector('#maintitle');
+        const maintitle = document.querySelector('#weatherdata');
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(data, "text/xml");
         const windSpeed = xmlDoc.getElementsByTagName("windSpeed")[0].getAttribute("mps");
         const windDirection = xmlDoc.getElementsByTagName("windDirection")[0].getAttribute("name");
 
         const temperature = xmlDoc.getElementsByTagName("temperature")[0].getAttribute("value");
-        const output = "Kirkenes Film Festival " + temperature + "°C" + " " + windSpeed + " mps " + windDirection;
+        const output = temperature + "°C" + " " + windSpeed + " mps " + windDirection;
         maintitle.textContent = output;
-        document.title = output;
+        document.title = "Kirkenes Film Festival " + output;
     })
     .catch(error => {
         console.error(error);

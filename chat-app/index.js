@@ -3,15 +3,11 @@
 
 const express = require('express');
 const app = express();
-// const http = require('http').createServer(app);
-const https = require('https');
+const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 const port = 3000;
 const lastMessages = {};
-const myserver = https.createServer({
-    key: fs.readFileSync('/etc/letsencrypt/live/aleksinmasiina.northeurope.cloudapp.azure.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/aleksinmasiina.northeurope.cloudapp.azure.com/fullchain.pem')
-});
+
 
 app.use(express.static('public'));
 
@@ -61,10 +57,8 @@ io.on('connection', (socket) => {
     });
 });
 
-myserver.listen(port, () => {
-    console.log('Are we happy yet? https://aleksinmasiina.northeurope.cloudapp.azure.com:' + port + '/index.html up and running!');
-});
 
-// http.listen(port, () => {
-//     console.log('Are we happy yet? http://localhost:' + port + '/index.html up and running!');
-// });
+
+http.listen(port, () => {
+    console.log('Are we happy yet? http://localhost:' + port + '/index.html up and running!');
+});

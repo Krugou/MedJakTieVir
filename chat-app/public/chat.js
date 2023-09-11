@@ -11,8 +11,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     const currentRoom = roomSelect.value;
     const inp = document.getElementById('m');
-    const username = document.getElementById('username').value; // get the username from an input field
-    // get the room from a select field
+    const username = document.getElementById('username').value;
     socket.emit('chat message', {message: inp.value, username: username, room: currentRoom}); // emit an object with the message, username, and room
     inp.value = '';
 });

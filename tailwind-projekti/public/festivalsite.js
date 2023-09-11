@@ -65,7 +65,7 @@ fetch("https://api.met.no/weatherapi/locationforecast/2.0/classic?lat=69.7267674
         // add arrow icon
         const arrow = document.createElement('img');
         arrow.src = "./dist/png/up-arrow2.png";
-        arrow.classList.add('arrow', 'w-6', 'h-6');
+        arrow.classList.add('arrow', 'w-6', 'h-6', 'bg-white', 'rounded-full', 'p-1', 'mx-2', 'inline-block', 'align-middle', 'transform', 'transition', 'duration-500', 'ease-in-out');
 
         const maintitle = document.querySelector('#weatherdata');
         const parser = new DOMParser();
@@ -79,7 +79,10 @@ fetch("https://api.met.no/weatherapi/locationforecast/2.0/classic?lat=69.7267674
 
         const temperature = xmlDoc.getElementsByTagName("temperature")[0].getAttribute("value");
         const output = temperature + "°C" + " " + windSpeed + "m/s ";
-        maintitle.textContent = output;
+        const weathernumbers = document.createElement('p');
+        weathernumbers.classList.add('mybasetext');
+        weathernumbers.textContent = output;
+        maintitle.appendChild(weathernumbers);
         maintitle.appendChild(arrow);
         document.title = "Kirkenes Film Festival " + output;
     })

@@ -5,7 +5,7 @@
 // const socket = io('http://192.168.52.1:3000');
 const socket = io();
 const roomSelect = document.getElementById('room');
-let forgetUsernameClicked = false;
+// let forgetUsernameClicked = false;
 
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
@@ -29,21 +29,26 @@ socket.on('chat message', (data) => {
         document.getElementById('username').value = localStorage.getItem('chatappusername');
     }
     // get username from local storage
-    const chatappusername = localStorage.getItem('chatappusername');
+    // const chatappusername = localStorage.getItem('chatappusername');
     const currentRoom = roomSelect.value;
     if (data.room === currentRoom) {
         const item = document.createElement('li');
         // add tailwind classes to the list item
         item.classList.add('rounded', 'p-2', 'm-2', 'shadow', 'text-white', 'dark:text-white');
-        if (data.username === document.getElementById('username').value || data.username === chatappusername) {
+        if (data.username === document.getElementById('username').value) {
             item.classList.add('self-end', 'bg-blue-500', 'dark:bg-blue-900');
         } else {
             item.classList.add('self-start', 'bg-pink-500', 'dark:bg-pink-900');
         }
+        // if (data.username === document.getElementById('username').value || data.username === chatappusername) {
+        //     item.classList.add('self-end', 'bg-blue-500', 'dark:bg-blue-900');
+        // } else {
+        //     item.classList.add('self-start', 'bg-pink-500', 'dark:bg-pink-900');
+        // }
         item.innerHTML = `${data.username}: ${data.message}`;
         document.getElementById('messages').appendChild(item);
-        localStorage.setItem('chatappusername', data.username);
-        forgetUsernameButton = false;
+        // localStorage.setItem('chatappusername', data.username);
+        // forgetUsernameClicked = false;
 
 
     } else {

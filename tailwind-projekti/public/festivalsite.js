@@ -62,17 +62,34 @@ document.addEventListener('mousemove', () => {
 fetch("https://api.met.no/weatherapi/locationforecast/2.0/classic?lat=69.7267674114827&lon=30.04699366185751")
     .then(response => response.text())
     .then(data => {
+        // add arrow icon
+        const arrow = document.createElement('img');
+        arrow.src = "./dist/png/up-arrow2.png";
+        arrow.classList.add('arrow', 'w-6', 'h-6');
+
         const maintitle = document.querySelector('#weatherdata');
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(data, "text/xml");
         const windSpeed = xmlDoc.getElementsByTagName("windSpeed")[0].getAttribute("mps");
-        const windDirection = xmlDoc.getElementsByTagName("windDirection")[0].getAttribute("name");
+        const windDirectionDegree = xmlDoc.getElementsByTagName("windDirection")[0].getAttribute("deg");
+        // reverse winddirectiondegree to opposite direction
+        const windDirectionDegreeReversed = windDirectionDegree - 180;
+        // rotate arrow icon according to wind direction
+        arrow.style.transform = "rotate(" + windDirectionDegreeReversed + "deg)";
 
         const temperature = xmlDoc.getElementsByTagName("temperature")[0].getAttribute("value");
-        const output = temperature + "°C" + " " + windSpeed + " mps " + windDirection;
+        const output = temperature + "°C" + " " + windSpeed + "m/s ";
         maintitle.textContent = output;
+        maintitle.appendChild(arrow);
         document.title = "Kirkenes Film Festival " + output;
     })
     .catch(error => {
         console.error(error);
     });
+
+// make bg image move on mousemove
+const bg = document.querySelector('.bg-aurora');
+document.addEventListener('mousemove', (e) => {
+
+    bg.style.backgroundPositionX = -e.pageX / 300 + 'px';
+});

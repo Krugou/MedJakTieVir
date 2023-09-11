@@ -25,9 +25,9 @@ roomSelect.addEventListener('change', (event) => {
     socket.emit('get messages', newRoom);
 });
 socket.on('chat message', (data) => {
-    if (localStorage.getItem('chatappusername')) {
-        document.getElementById('username').value = localStorage.getItem('chatappusername');
-    }
+    // if (localStorage.getItem('chatappusername')) {
+    //     document.getElementById('username').value = localStorage.getItem('chatappusername');
+    // }
     // get username from local storage
     // const chatappusername = localStorage.getItem('chatappusername');
     const currentRoom = roomSelect.value;
@@ -45,7 +45,7 @@ socket.on('chat message', (data) => {
         // } else {
         //     item.classList.add('self-start', 'bg-pink-500', 'dark:bg-pink-900');
         // }
-        item.innerHTML = `${data.username}: ${data.message}`;
+        item.textContent = `${data.username}: ${data.message}`;
         document.getElementById('messages').appendChild(item);
         // localStorage.setItem('chatappusername', data.username);
         // forgetUsernameClicked = false;
@@ -67,23 +67,23 @@ socket.on('disconnect', () => {
     socket.emit('leave room', currentRoom);
 
 });
-const forgetUsernameButton = document.getElementById('forget-username');
-forgetUsernameButton.addEventListener('click', () => {
-    if (!forgetUsernameClicked) {
-        forgetUsernameClicked = true;
-        if (localStorage.getItem('chatappusername')) {
-            localStorage.removeItem('chatappusername');
-        } else {
-            forgetUsernameButton.innerText = 'No username stored';
-            forgetUsernameButton.classList.add('animate-pulse');
-            setTimeout(() => {
-                forgetUsernameButton.innerText = 'Forget username';
-                forgetUsernameButton.classList.remove('animate-pulse');
-            }, 5000);
-        }
-        location.reload();
-    }
-});
+// const forgetUsernameButton = document.getElementById('forget-username');
+// forgetUsernameButton.addEventListener('click', () => {
+//     if (!forgetUsernameClicked) {
+//         forgetUsernameClicked = true;
+//         if (localStorage.getItem('chatappusername')) {
+//             localStorage.removeItem('chatappusername');
+//         } else {
+//             forgetUsernameButton.innerText = 'No username stored';
+//             forgetUsernameButton.classList.add('animate-pulse');
+//             setTimeout(() => {
+//                 forgetUsernameButton.innerText = 'Forget username';
+//                 forgetUsernameButton.classList.remove('animate-pulse');
+//             }, 5000);
+//         }
+//         location.reload();
+//     }
+// });
 const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 

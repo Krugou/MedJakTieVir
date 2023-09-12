@@ -7,7 +7,7 @@
 		"dev": "vite --port 8080 --open  --host",
 		"devBrutal": "vite --port 8080 --open -d --force --host",
 		"devDebug": "vite --port 8080 --open -d --host",
-		"build": "vite build --outDir movieFestival --emptyOutDir --minify --manifest --ssrManifest --sourcemap",
+		"build": "vite build --outDir moviefestival --emptyOutDir --minify --manifest --ssrManifest --sourcemap --base MedJakTieVir/tailwind-react/moviefestival/ ",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview"
 	},

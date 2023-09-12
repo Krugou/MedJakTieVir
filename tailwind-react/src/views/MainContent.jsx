@@ -6,6 +6,7 @@ const MainContent = () => {
 
 
   return (
+    
     <main className="bg-alepurple container mx-auto p-4">
       <HeroSection />
       <FestivalSection />

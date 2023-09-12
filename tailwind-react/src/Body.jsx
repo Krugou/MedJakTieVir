@@ -2,6 +2,8 @@ import React from 'react';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
 import About from './views/About.jsx';
 import Contact from './views/Contact.jsx';
+import Events from './views/Events.jsx';
+import Films from './views/Films.jsx';
 import Footer from './views/Footer.jsx';
 import Header from './views/Header.jsx';
 import MainContent from './views/MainContent.jsx';
@@ -16,9 +18,10 @@ import Tickets from './views/Tickets.jsx';
 
 const Body = () => {
   return (
-    <Router>
-      <div className="bg-aleviolet">
-        <Header />
+
+    <div className="bg-aleviolet">
+      <Header />
+      <Router>
         <Routes>
           <Route exact path="/" element={<MainContent />} >
           </Route>
@@ -35,17 +38,17 @@ const Body = () => {
           <Route path="/team" element={<Team />} >
           </Route>
           <Route path="/contact" element={<Contact />} >  </Route>
-          <Route path="/social-media" element={<SocialMedia />} >  </Route>
+          <Route path="/socialmedia" element={<SocialMedia />} >  </Route>
           <Route path="/newsletter" element={<Newsletter />} >  </Route>
           <Route path="/mission" element={<Mission />} >  </Route>
           <Route path="/partners" element={<Partners />} >  </Route>
-
-
-
+          <Route path='/films' element={<Films />} >  </Route>
+          <Route path='/events' element={<Events />} >  </Route>
         </Routes>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+      <Footer />
+    </div>
+
   );
 };
 

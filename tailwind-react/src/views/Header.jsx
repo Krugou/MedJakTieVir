@@ -1,8 +1,8 @@
 import {useState} from 'react';
-import AudioPlayer from './subcomponents/AudioPlayer.jsx';
-import HamburgerButton from './subcomponents/HamburgerButton.jsx';
-import Nav from './subcomponents/Nav.jsx';
-import TitleWeather from './subcomponents/TitleWeather.jsx';
+import AudioPlayer from '../components/AudioPlayer.jsx';
+import HamburgerButton from '../components/HamburgerButton.jsx';
+import Nav from '../components/Nav.jsx';
+import TitleWeather from '../components/TitleWeather.jsx';
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);

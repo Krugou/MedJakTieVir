@@ -1,7 +1,7 @@
-import Chat from "./subcomponents/Chat";
-import EventsSection from "./subcomponents/EventsSection";
-import FestivalSection from "./subcomponents/FestivalSection";
-import HeroSection from "./subcomponents/HeroSection";
+import Chat from "../components/Chat";
+import EventsSection from "../components/EventsSection";
+import FestivalSection from "../components/FestivalSection";
+import HeroSection from "../components/HeroSection";
 const MainContent = () => {
 
 

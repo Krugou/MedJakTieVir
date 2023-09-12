@@ -34,7 +34,7 @@ const WeatherData = () => {
     const {output, windDirectionDegreeReversed} = weatherData;
 
     return (
-        <div id="weatherdata">
+        <div id="weatherdata" className='flex flex-col md:flex-row'>
             <p className="mybasetext">{output}</p>
             <img
                 src="./png/up-arrow2.png"

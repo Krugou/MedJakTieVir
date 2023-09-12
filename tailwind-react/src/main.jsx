@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MyApp from './App.jsx';
+import Body from './Body.jsx';
 import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MyApp />
+    <Body />
 
   </React.StrictMode>,
 );

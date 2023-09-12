@@ -1,11 +1,19 @@
 import React from 'react';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom';
-import About from './components/About.jsx';
-import Schedule from './components/Schedule.jsx';
-import Tickets from './components/Tickets.jsx';
+import About from './views/About.jsx';
+import Contact from './views/Contact.jsx';
 import Footer from './views/Footer.jsx';
 import Header from './views/Header.jsx';
 import MainContent from './views/MainContent.jsx';
+import Mission from './views/Mission.jsx';
+import Newsletter from './views/Newsletter.jsx';
+import NotFound from './views/NotFound.jsx';
+import Partners from './views/Partners.jsx';
+import Schedule from './views/Schedule.jsx';
+import SocialMedia from './views/SocialMedia.jsx';
+import Team from './views/Team.jsx';
+import Tickets from './views/Tickets.jsx';
+
 const Body = () => {
   return (
     <Router>
@@ -20,6 +28,20 @@ const Body = () => {
           </Route>
           <Route path="/tickets" element={<Tickets />} >
           </Route>
+          <Route path="*" element={<NotFound />} >
+          </Route>
+          <Route path="/404" element={<NotFound />} >
+          </Route>
+          <Route path="/team" element={<Team />} >
+          </Route>
+          <Route path="/contact" element={<Contact />} >  </Route>
+          <Route path="/social-media" element={<SocialMedia />} >  </Route>
+          <Route path="/newsletter" element={<Newsletter />} >  </Route>
+          <Route path="/mission" element={<Mission />} >  </Route>
+          <Route path="/partners" element={<Partners />} >  </Route>
+
+
+
         </Routes>
         <Footer />
       </div>

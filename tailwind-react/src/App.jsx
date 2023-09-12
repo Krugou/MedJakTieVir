@@ -1,22 +1,16 @@
 import {useState} from 'react';
-import './App.css';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-
-function App() {
-  const [count, setCount] = useState(0);
+import Footer from './Footer.jsx';
+import Header from './Header.jsx';
+import MainContent from './MainContent.jsx';
+const App = () => {
 
   return (
-    <>
-      <h1 className='text-white bg-black'>Vite + React</h1>
-      <div className="border rounded bg-black text-white">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-
-    </>
+    <body className="bg-aleviolet">
+      <Header />
+      <MainContent />
+      <Footer />
+    </body>
   );
-}
+};
 
 export default App;

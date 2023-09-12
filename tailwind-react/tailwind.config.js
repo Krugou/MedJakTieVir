@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'aurora': "url('./img/aurora.png')",
+        'aurora': "url('./assets/img/aurora.png')",
       },
       colors: {
         aleviolet: '#464660',

@@ -1,14 +1,21 @@
 {
   "index.css": {
-    "file": "assets/index-fcb217bf.css",
+    "file": "assets/index-9d1fd63a.css",
     "src": "index.css"
   },
   "index.html": {
-    "css": [
-      "assets/index-fcb217bf.css"
+    "assets": [
+      "assets/aurora-7518b74e.png"
     ],
-    "file": "assets/index-ba14dfdd.js",
+    "css": [
+      "assets/index-9d1fd63a.css"
+    ],
+    "file": "assets/index-c57e1ecd.js",
     "isEntry": true,
     "src": "index.html"
+  },
+  "src/assets/img/aurora.png": {
+    "file": "assets/aurora-7518b74e.png",
+    "src": "src/assets/img/aurora.png"
   }
 }

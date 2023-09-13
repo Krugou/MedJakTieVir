@@ -3,13 +3,23 @@
 
 <head>
     <title>HLS Video Example</title>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 </head>
 
 <body>
-    <video controls>
-        <source src="master.m3u8" type="application/x-mpegURL">
+    <section>
+        <video controls>
+            <source src="master.m3u8" type="application/x-mpegURL">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <section>
+    <video data-dashjs-player controls>
+        <source src="output.mpd" type="application/dash+xml">
         Your browser does not support the video tag.
     </video>
+    </section>
 </body>
 
 </html>

@@ -4,63 +4,7 @@
 <head>
     <title>WebRTC Example</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        // Connect to the signaling server
-        const socket = io();
-
-        // Handle incoming signaling messages
-        socket.on('signal', (message) => {
-            console.log('received signal:', message);
-
-            // Handle the signaling message based on its type
-            switch (message.type) {
-                case 'offer':
-                    handleOffer(message);
-                    break;
-                case 'answer':
-                    handleAnswer(message);
-                    break;
-                case 'ice-candidate':
-                    handleIceCandidate(message);
-                    break;
-            }
-        });
-
-        // Send a signaling message to the server
-        function sendSignal(message) {
-            console.log('sending signal:', message);
-            socket.emit('signal', message);
-        }
-
-        // Handle the offer message
-        function handleOffer(message) {
-            // TODO: Create a new RTCPeerConnection and set up the local media stream
-            // TODO: Set the remote description and create an answer
-            // TODO: Set the local description and send it to the server
-        }
-
-        // Handle the answer message
-        function handleAnswer(message) {
-            // TODO: Set the remote description
-        }
-
-        // Handle the ICE candidate message
-        function handleIceCandidate(message) {
-            // TODO: Add the ICE candidate to the RTCPeerConnection
-        }
-
-        // Handle the "Call" button click event
-        document.getElementById('callButton').addEventListener('click', () => {
-            // TODO: Create a new RTCPeerConnection and set up the local media stream
-            // TODO: Create an offer and set the local description
-            // TODO: Send the offer to the remote peer
-        });
-
-        // Handle the "Hang Up" button click event
-        document.getElementById('hangupButton').addEventListener('click', () => {
-            // TODO: Close the RTCPeerConnection and stop the local media stream
-        });
-    </script>
+    <script src="index.js"></script>
 </head>
 
 <body>

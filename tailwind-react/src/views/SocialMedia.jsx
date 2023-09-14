@@ -10,7 +10,7 @@ const SocialMedia = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 {/* Social Media Link 1 */}
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-6">
                     <a
                         href="https://www.facebook.com/KirkenesFilmFestival"
                         target="_blank"
@@ -23,7 +23,7 @@ const SocialMedia = () => {
                 </div>
 
                 {/* Social Media Link 2 */}
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-6">
                     <a
                         href="https://twitter.com/KirkenesFilmFest"
                         target="_blank"
@@ -36,7 +36,7 @@ const SocialMedia = () => {
                 </div>
 
                 {/* Social Media Link 3 */}
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-6">
                     <a
                         href="https://www.instagram.com/kirkenesfilmfest/"
                         target="_blank"

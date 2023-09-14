@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-
 const AudioPlayer = ({isAudioPlaying, toggleAudio}) => {
+
     return (
         <>
             <audio>
@@ -12,8 +12,12 @@ const AudioPlayer = ({isAudioPlaying, toggleAudio}) => {
                 id="playButton"
                 onClick={toggleAudio}
             >
+
                 {isAudioPlaying ? 'Pause festival theme' : 'Play festival theme'}
             </button>
+
+
+
         </>
     );
 };

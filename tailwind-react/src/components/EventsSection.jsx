@@ -1,6 +1,46 @@
+import '@videojs/themes/dist/fantasy/index.css';
 import React from 'react';
-
+import videojs from 'video.js';
+import VideoPlayer from './VideoPlayer.jsx';
 const EventsSection = () => {
+  const playerRef = React.useRef(null);
+
+
+  const videoJsOptions = {
+    autoplay: true,
+    controls: true,
+    responsive: true,
+    inactivityTimeout: 0,
+    fluid: true,
+    sources: [{
+      src: 'http://195.148.104.124:1935/jakelu/disconnecte/playlist.m3u8',
+      type: 'application/x-mpegURL'
+    }],
+    html5: {
+      vhs: {
+        overrideNative: true
+      }
+    },
+    poster: './img/aurora.png'
+
+
+  };
+
+
+
+
+  const handlePlayerReady = (player) => {
+    playerRef.current = player;
+
+    // You can handle player events here, for example:
+    player.on('waiting', () => {
+      videojs.log('player is waiting');
+    });
+
+    player.on('dispose', () => {
+      videojs.log('player will dispose');
+    });
+  };
   return (
     <section className="border rounded flex flex-col md:flex-row justify-center items-center md:items-start p-4 mb-8">
       <div className="md:w-1/2 m-4 ">
@@ -16,9 +56,10 @@ const EventsSection = () => {
           See Full Schedule
         </a>
       </div>
-      <div className="relative m-4 pb-9/16 w-full h-96">
+      <div className="relative m-4  w-full h-96">
+        <VideoPlayer className="w-full h-full " options={videoJsOptions} onReady={handlePlayerReady} />
         <iframe
-          className="w-full h-full"
+          className="w-full h-full hidden"
           src="https://www.youtube.com/embed/Ecl6qzZqxQM?si=jbam-BPnQxKFOhhA&amp;controls=0;autoplay=1;mute=1;loop=1;"
           title="YouTube video player"
           frameBorder="0"

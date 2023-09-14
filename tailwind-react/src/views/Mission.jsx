@@ -2,9 +2,9 @@ import React from 'react';
 
 const Mission = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Our Mission</h1>
-            <p className="text-lg mybasetext mt-4">
+            <p className="text-lg mybasetext  mt-4">
                 At the Kirkenes Film Festival, our mission is to celebrate the art of cinema and bring people together
                 through the magic of storytelling. We are dedicated to showcasing diverse and thought-provoking films
                 from around the world, fostering creativity, and nurturing a love for cinema among our audiences.

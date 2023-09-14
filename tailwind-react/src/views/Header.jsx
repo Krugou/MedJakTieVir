@@ -1,9 +1,8 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import AudioPlayer from '../components/AudioPlayer.jsx';
 import HamburgerButton from '../components/HamburgerButton.jsx';
 import Nav from '../components/Nav.jsx';
 import TitleWeather from '../components/TitleWeather.jsx';
-
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -26,9 +25,9 @@ const Header = () => {
         <header className="flex justify-between m-2 p-4 items-center">
             <AudioPlayer isAudioPlaying={isAudioPlaying} toggleAudio={toggleAudio} />
             <TitleWeather />
-            <div className="flex md:flex-row flex-col" id="weatherdata"></div>
             <Nav isNavOpen={isNavOpen} />
             <HamburgerButton toggleNav={toggleNav} />
+
         </header>
     );
 };

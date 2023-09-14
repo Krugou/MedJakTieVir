@@ -2,7 +2,7 @@ import React from 'react';
 
 const Schedule = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Festival Schedule</h1>
             <p className="text-lg mybasetext mt-4">
                 Explore the exciting lineup of films, events, and screenings scheduled for the Kirkenes Film Festival.

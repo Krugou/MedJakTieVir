@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Our Festival Partners</h1>
             <p className="text-lg mybasetext mt-4">
                 We are grateful to our festival partners for their support in making the Kirkenes Film Festival a

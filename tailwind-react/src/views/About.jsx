@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">About Kirkenes Film Festival</h1>
             <p className="text-lg mybasetext mt-4">
                 Welcome to the Kirkenes Film Festival, a celebration of cinema and storytelling! Our festival has a rich

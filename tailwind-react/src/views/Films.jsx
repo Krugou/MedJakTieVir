@@ -2,7 +2,7 @@ import React from 'react';
 
 const Films = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Explore the Films</h1>
             <p className="text-lg mybasetext mt-4">
                 Dive into a world of cinematic brilliance at the Kirkenes Film Festival! Our carefully curated selection

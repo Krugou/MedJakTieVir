@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Contact Us</h1>
             <p className="text-lg mybasetext mt-4">
                 We'd love to hear from you! If you have any questions, feedback, or inquiries about the Kirkenes Film

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SocialMedia = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">Connect with Us on Social Media</h1>
             <p className="text-lg mybasetext mt-4">
                 Stay updated with the latest festival news, film screenings, and behind-the-scenes insights by following us on

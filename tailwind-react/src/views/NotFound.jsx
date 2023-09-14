@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div className='bg-alepurple container mx-auto p-4 m-4'>
+        <div className='bg-alepurple container mx-auto p-10 m-4'>
             <h1 className="text-4xl font-bold mybasetext">404 - Page Not Found</h1>
             <p className="text-lg mybasetext mt-4">
                 Oops! The page you are looking for does not exist.

@@ -18,9 +18,10 @@ const WeatherData = () => {
                 // reverse winddirectiondegree to opposite direction
                 const windDirectionDegreeReversed = windDirectionDegree - 180;
                 const temperature = xmlDoc.getElementsByTagName('temperature')[0].getAttribute('value');
+                const windSpeedOutput = windSpeed + ' m/s';
+                const temperatureOutput = temperature + '°C';
 
-                const output = temperature + '°C' + ' ' + windSpeed + 'm/s';
-                setWeatherData({output, windDirectionDegreeReversed, weatherCode});
+                setWeatherData({windSpeedOutput, temperatureOutput, windDirectionDegreeReversed, weatherCode});
             } catch (error) {
                 console.error(error);
             }
@@ -33,12 +34,14 @@ const WeatherData = () => {
         return null;
     }
 
-    const {output, windDirectionDegreeReversed, weatherCode} = weatherData;
+    const {temperatureOutput, windSpeedOutput, windDirectionDegreeReversed, weatherCode} = weatherData;
 
     return (
         <div id="weatherdata" className='flex flex-col md:flex-row'>
-            <p className="mybasetext">{output}</p>
+            <p className="mybasetext">{temperatureOutput}</p>
             <img src={`./weather/png/${weatherCode}.png`} alt='Weather icon' className='w-6 h-6 bg-white rounded-full p-1 mx-2 inline-block align-middle transform transition duration-500 ease-in-out' />
+            <p className="mybasetext">{windSpeedOutput}</p>
+
             <img
                 src="./png/up-arrow2.png"
                 alt="Wind direction arrow"

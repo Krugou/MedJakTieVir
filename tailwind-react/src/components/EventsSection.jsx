@@ -13,7 +13,7 @@ const EventsSection = () => {
     inactivityTimeout: 0,
     fluid: true,
     sources: [{
-      src: 'http://195.148.104.124:1935/jakelu/disconnecte/playlist.m3u8',
+      src: 'http://195.148.104.124:1935/jakelu/kirkenesfilmfestival/playlist.m3u8',
       type: 'application/x-mpegURL'
     }],
     html5: {

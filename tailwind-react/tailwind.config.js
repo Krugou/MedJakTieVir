@@ -9,6 +9,9 @@ export default {
   },
 
   theme: {
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+    },
     extend: {
       backgroundImage: {
         'aurora': "url('./assets/img/aurora.png')",

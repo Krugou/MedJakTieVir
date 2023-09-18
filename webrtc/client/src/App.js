@@ -2,7 +2,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
-import logo from './logo.svg';
 import CreateRoom from "./routes/CreateRoom";
 import Room from "./routes/Room";
 

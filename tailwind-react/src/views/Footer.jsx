@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="flex justify-center flex-row p-2 text-white">
-            <div className="container flex flex-row xs:flex-col p-2 justify-center">
-                <div className="w-full md:w-1/3 mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Explore</h3>
+            <div className="container flex flex-col xs:flex-row p-2 justify-center">
+                <div className="w-full xs:w-1/2 md:w-1/3 mb-4 md:mb-0">
+                    <h3 className="text-lg md:text-xl font-bold mb-2">Explore</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="schedule2">
                             <a href="/schedule">Schedule</a>
@@ -18,8 +18,8 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="w-full md:w-1/3 mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Connect</h3>
+                <div className="w-full xs:w-1/2 md:w-1/3 mb-4 md:mb-0">
+                    <h3 className="text-lg md:text-xl font-bold mb-2">Connect</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="contact">
                             <a href="/contact">Contact</a>
@@ -32,8 +32,8 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="w-full md:w-1/3 mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">About Us</h3>
+                <div className="w-full xs:w-1/2 md:w-1/3 mb-4 md:mb-0">
+                    <h3 className="text-lg md:text-xl font-bold mb-2">About Us</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="mission">
                             <a href="/mission">Mission</a>
@@ -48,6 +48,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+
     );
 };
 

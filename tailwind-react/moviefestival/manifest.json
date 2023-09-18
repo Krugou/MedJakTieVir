@@ -1,18 +1,138 @@
 {
   "index.css": {
-    "file": "assets/index-9d1fd63a.css",
+    "file": "assets/index-4f9d4d7f.css",
     "src": "index.css"
   },
   "index.html": {
     "assets": [
-      "assets/aurora-7518b74e.png"
+      "assets/aurora-7518b74e.png",
+      "assets/roboto-latin-100-12823d58.woff2",
+      "assets/roboto-latin-100-c4ead4de.woff",
+      "assets/roboto-latin-100italic-26c91ea4.woff2",
+      "assets/roboto-latin-100italic-5a3a9840.woff",
+      "assets/roboto-latin-300-29f6da0a.woff2",
+      "assets/roboto-latin-300-76b05400.woff",
+      "assets/roboto-latin-300italic-9e02524e.woff2",
+      "assets/roboto-latin-300italic-0be0ae6e.woff",
+      "assets/roboto-latin-400-48c3fa6f.woff2",
+      "assets/roboto-latin-400-c1dc87f9.woff",
+      "assets/roboto-latin-400italic-401e6c25.woff2",
+      "assets/roboto-latin-400italic-80815efe.woff",
+      "assets/roboto-latin-500-24369e1b.woff2",
+      "assets/roboto-latin-500-ba98f991.woff",
+      "assets/roboto-latin-500italic-8688b620.woff2",
+      "assets/roboto-latin-500italic-6f2974a3.woff",
+      "assets/roboto-latin-700-b4d07892.woff2",
+      "assets/roboto-latin-700-806ea46c.woff",
+      "assets/roboto-latin-700italic-5cc2e477.woff2",
+      "assets/roboto-latin-700italic-eec14260.woff",
+      "assets/roboto-latin-900-edcdf3f6.woff2",
+      "assets/roboto-latin-900-e8586f9d.woff",
+      "assets/roboto-latin-900italic-95e60b93.woff2",
+      "assets/roboto-latin-900italic-6a80d9cb.woff"
     ],
     "css": [
-      "assets/index-9d1fd63a.css"
+      "assets/index-4f9d4d7f.css"
     ],
-    "file": "assets/index-c57e1ecd.js",
+    "file": "assets/index-e74d57b8.js",
     "isEntry": true,
     "src": "index.html"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-100.woff": {
+    "file": "assets/roboto-latin-100-c4ead4de.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-100.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-100.woff2": {
+    "file": "assets/roboto-latin-100-12823d58.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-100.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-100italic.woff": {
+    "file": "assets/roboto-latin-100italic-5a3a9840.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-100italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-100italic.woff2": {
+    "file": "assets/roboto-latin-100italic-26c91ea4.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-100italic.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-300.woff": {
+    "file": "assets/roboto-latin-300-76b05400.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-300.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-300.woff2": {
+    "file": "assets/roboto-latin-300-29f6da0a.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-300.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-300italic.woff": {
+    "file": "assets/roboto-latin-300italic-0be0ae6e.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-300italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-300italic.woff2": {
+    "file": "assets/roboto-latin-300italic-9e02524e.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-300italic.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-400.woff": {
+    "file": "assets/roboto-latin-400-c1dc87f9.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-400.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-400.woff2": {
+    "file": "assets/roboto-latin-400-48c3fa6f.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-400.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-400italic.woff": {
+    "file": "assets/roboto-latin-400italic-80815efe.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-400italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-400italic.woff2": {
+    "file": "assets/roboto-latin-400italic-401e6c25.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-400italic.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-500.woff": {
+    "file": "assets/roboto-latin-500-ba98f991.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-500.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-500.woff2": {
+    "file": "assets/roboto-latin-500-24369e1b.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-500.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-500italic.woff": {
+    "file": "assets/roboto-latin-500italic-6f2974a3.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-500italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-500italic.woff2": {
+    "file": "assets/roboto-latin-500italic-8688b620.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-500italic.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-700.woff": {
+    "file": "assets/roboto-latin-700-806ea46c.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-700.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-700.woff2": {
+    "file": "assets/roboto-latin-700-b4d07892.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-700.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-700italic.woff": {
+    "file": "assets/roboto-latin-700italic-eec14260.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-700italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-700italic.woff2": {
+    "file": "assets/roboto-latin-700italic-5cc2e477.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-700italic.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-900.woff": {
+    "file": "assets/roboto-latin-900-e8586f9d.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-900.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-900.woff2": {
+    "file": "assets/roboto-latin-900-edcdf3f6.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-900.woff2"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-900italic.woff": {
+    "file": "assets/roboto-latin-900italic-6a80d9cb.woff",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-900italic.woff"
+  },
+  "node_modules/typeface-roboto/files/roboto-latin-900italic.woff2": {
+    "file": "assets/roboto-latin-900italic-95e60b93.woff2",
+    "src": "node_modules/typeface-roboto/files/roboto-latin-900italic.woff2"
   },
   "src/assets/img/aurora.png": {
     "file": "assets/aurora-7518b74e.png",

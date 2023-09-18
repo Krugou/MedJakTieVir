@@ -1,7 +1,7 @@
+import '@videojs/themes/dist/fantasy/index.css';
 import React from 'react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
-import '@videojs/themes/dist/fantasy/index.css';
 
 
 export const VideoPlayer = (props) => {
@@ -47,12 +47,16 @@ export const VideoPlayer = (props) => {
     }, [playerRef]);
 
     return (
-        <div data-vjs-player className="bg-black rounded-lg shadow-lg ">
-            <div ref={videoRef} className="video-js vjs-theme-city" >
-                <style jsx>{`
+        <>
+            <div data-vjs-player className="w-full h-full">
+                <div ref={videoRef} className="video-js   vjs-theme-city " >
+                    <style jsx>{`
                     .video-js {
                         width: 100%;
-                        height: auto;
+                        height: 100%;
+                    }
+                    .vjs-theme-city .vjs-control-bar {
+                        background-color: #153640;
                     }
                     .vjs-big-play-button {
                         background-color: rgba(255, 255, 255, 0.8);
@@ -64,9 +68,12 @@ export const VideoPlayer = (props) => {
                         background-color: rgba(255, 255, 255, 1);
                     }
                 `}</style>
+                </div>
             </div>
-        </div>
-    );
+            <div className='w-100 h-auto'>
+                
+            </div>
+        </>);
 };
 
 export default VideoPlayer;

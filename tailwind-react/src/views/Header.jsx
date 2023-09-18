@@ -34,20 +34,20 @@ const Header = () => {
             <Nav isNavOpen={isNavOpen} />
             <HamburgerButton toggleNav={toggleNav} />
             {showPopup && (
-                <div className="p-2 m-4 rounded bg-gray-200 text-gray-800 absolute top-6 left-1/2" >
+                <div className="p-2 m-4 rounded bg-gray-200 text-gray-800 absolute top-6 left-1/2 transform -translate-x-1/2">
                     <div className="flex items-center flex-col">
                         <img
                             src="./img/artist.jpeg"
                             alt="Detektivbyrån"
-                            className="w-16 h-16 rounded-full mr-4"
+                            className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-2 md:mb-4"
                         />
                         <div>
-                            <h1 className="text-2xl font-bold">Detektivbyrån</h1>
-                            <p className="text-gray-600">om du möter varg and e18  </p>
+                            <h1 className="text-lg md:text-2xl font-bold">Detektivbyrån</h1>
+                            <p className="text-gray-600 text-sm md:text-base">om du möter varg and e18</p>
                         </div>
                     </div>
-
                 </div>
+
             )}
 
         </header>

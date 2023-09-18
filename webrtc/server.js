@@ -6,10 +6,7 @@ const socket = require("socket.io");
 const io = socket(http);
 const port = 3003;
 
-app.use(express.static(path.join(__dirname, './client/build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
+app.use(express.static('./client/build'));
 
 const rooms = {};
 

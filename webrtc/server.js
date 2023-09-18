@@ -4,8 +4,9 @@ const app = express();
 const server = http.createServer(app);
 const socket = require("socket.io");
 const io = socket(server);
-const port = process.env.PORT || 3003;
-app.use(express.static(path.join(__dirname, "client/build")));
+const port = 3003;
+
+app.use(express.static("client/build"));
 
 const rooms = {};
 

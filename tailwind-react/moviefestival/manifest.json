@@ -1,6 +1,6 @@
 {
   "index.css": {
-    "file": "assets/index-4f9d4d7f.css",
+    "file": "assets/index-51a78ca4.css",
     "src": "index.css"
   },
   "index.html": {
@@ -32,9 +32,9 @@
       "assets/roboto-latin-900italic-6a80d9cb.woff"
     ],
     "css": [
-      "assets/index-4f9d4d7f.css"
+      "assets/index-51a78ca4.css"
     ],
-    "file": "assets/index-e931f607.js",
+    "file": "assets/index-01cd038b.js",
     "isEntry": true,
     "src": "index.html"
   },

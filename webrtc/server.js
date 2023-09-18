@@ -1,9 +1,9 @@
 const express = require("express");
-const http = require("http");
 const app = express();
-const server = http.createServer(app);
+const http = require('http').createServer(app);
+
 const socket = require("socket.io");
-const io = socket(server);
+const io = socket(http);
 const port = 3003;
 
 app.use(express.static('./client/build'));
@@ -38,4 +38,6 @@ io.on("connection", socket => {
 });
 
 
-server.listen(port, () => console.log('server is running on port ' + port));
+http.listen(port, () => {
+    console.log('Are we happy yet? http://localhost:' + port + '/index.html up and running!');
+});

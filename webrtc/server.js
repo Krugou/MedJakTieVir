@@ -6,7 +6,7 @@ const socket = require("socket.io");
 const io = socket(server);
 const port = 3003;
 
-app.use(express.static("client/build"));
+app.use(express.static('./client/build'));
 
 const rooms = {};
 

@@ -13,8 +13,8 @@ const EventsSection = () => {
     inactivityTimeout: 0,
     fluid: true,
     sources: [{
-      src: 'https://195.148.104.124:1935/jakelu/kirkenesfilmfestival/playlist.m3u8',
-      type: 'application/x-mpegURL'
+      src: 'https://195.148.104.124:1935/jakelu/kirkenesfilmfestival/manifest.mpd',
+      type: 'application/dash+xml'
     }],
     playbackRates: [0.5, 1, 1.5, 2],
     html5: {
@@ -23,6 +23,7 @@ const EventsSection = () => {
       }
     },
     poster: './img/aurora.png',
+    liveui: true,
 
 
 

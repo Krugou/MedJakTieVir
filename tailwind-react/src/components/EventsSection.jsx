@@ -22,7 +22,8 @@ const EventsSection = () => {
         overrideNative: true
       }
     },
-    poster: './img/aurora.png'
+    poster: './img/aurora.png',
+
 
 
   };

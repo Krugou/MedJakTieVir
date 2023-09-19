@@ -56,13 +56,30 @@ export const VideoPlayer = (props) => {
                         height: 100%;
                     }
                     .vjs-theme-city .vjs-control-bar {
+                        font-size: 2em;
+
                         background-color: #153640;
                     }
-                    .vjs-big-play-button {
-                        background-color: rgba(255, 255, 255, 0.8);
-                        border-radius: 9999px;
-                        padding: 16px;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    .vjs-paused {
+                        font-size: 1.2em;
+                    }
+                    .vjs-playing {
+                        
+                        font-size: 1em;
+                    }
+                    .vjs-icon-placeholder:before , .vjs-playback-rate {
+                        color: #876484;
+
+                    }
+                    .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+                        content: "";
+                        background-color: #white;
+                        background-image: url('./img/auroraicon.png');
+                        background-repeat: no-repeat;
+                        background-size: 4rem;
+                        background-position: 55% calc(50% - 0px);
+                        border: none !important;
+                        box-shadow: none !important;
                     }
                     .vjs-big-play-button:hover {
                         background-color: rgba(255, 255, 255, 1);
@@ -71,7 +88,7 @@ export const VideoPlayer = (props) => {
                 </div>
             </div>
             <div className='w-100 h-auto'>
-                
+
             </div>
         </>);
 };

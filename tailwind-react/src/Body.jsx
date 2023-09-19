@@ -23,27 +23,27 @@ const Body = () => {
       <Header />
       <Router>
         <Routes>
-          <Route exact path="/" element={<MainContent />} >
+          <Route exact path="/react" element={<MainContent />} >
           </Route>
-          <Route path="/about" element={<About />} >
+          <Route path="/react/about" element={<About />} >
           </Route>
-          <Route path="/schedule" element={<Schedule />} >
+          <Route path="/react/schedule" element={<Schedule />} >
           </Route>
-          <Route path="/tickets" element={<Tickets />} >
+          <Route path="/react/tickets" element={<Tickets />} >
           </Route>
-          {/* <Route path="*" element={<NotFound />} >
-          </Route> */}
-          <Route path="/404" element={<NotFound />} >
+          <Route path="/react/*" element={<NotFound />} >
           </Route>
-          <Route path="/team" element={<Team />} >
+          <Route path="/react/404" element={<NotFound />} >
           </Route>
-          <Route path="/contact" element={<Contact />} >  </Route>
-          <Route path="/socialmedia" element={<SocialMedia />} >  </Route>
-          <Route path="/newsletter" element={<Newsletter />} >  </Route>
-          <Route path="/mission" element={<Mission />} >  </Route>
-          <Route path="/partners" element={<Partners />} >  </Route>
-          <Route path='/films' element={<Films />} >  </Route>
-          <Route path='/events' element={<Events />} >  </Route>
+          <Route path="/react/team" element={<Team />} >
+          </Route>
+          <Route path="/react/contact" element={<Contact />} >  </Route>
+          <Route path="/react/socialmedia" element={<SocialMedia />} >  </Route>
+          <Route path="/react/newsletter" element={<Newsletter />} >  </Route>
+          <Route path="/react/mission" element={<Mission />} >  </Route>
+          <Route path="/react/partners" element={<Partners />} >  </Route>
+          <Route path='/react/films' element={<Films />} >  </Route>
+          <Route path='/react/events' element={<Events />} >  </Route>
         </Routes>
       </Router>
       <Footer />

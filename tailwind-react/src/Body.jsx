@@ -23,7 +23,7 @@ const Body = () => {
       <Header />
       <Router>
         <Routes>
-          <Route exact path="/" element={<MainContent />} >
+          <Route exact path="/react" element={<MainContent />} >
           </Route>
           <Route path="/react/about" element={<About />} >
           </Route>

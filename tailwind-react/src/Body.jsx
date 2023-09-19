@@ -31,8 +31,8 @@ const Body = () => {
           </Route>
           <Route path="/tickets" element={<Tickets />} >
           </Route>
-          <Route path="*" element={<NotFound />} >
-          </Route>
+          {/* <Route path="*" element={<NotFound />} >
+          </Route> */}
           <Route path="/404" element={<NotFound />} >
           </Route>
           <Route path="/team" element={<Team />} >

@@ -4,7 +4,7 @@ const TitleWeather = () => {
     return (
         <>
             <a
-                href="/"
+                href="/react/"
                 className="logo text-2xl font-bold mybasetext hover:text-alecharcoal"
                 id="maintitle"
             >

@@ -8,13 +8,13 @@ const Footer = () => {
                     <h3 className="text-lg md:text-xl font-bold mb-2">Explore</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="schedule2">
-                            <a href="/schedule">Schedule</a>
+                            <a href="/react/schedule">Schedule</a>
                         </li>
                         <li className="mybutton" id="films">
-                            <a href="/films">Films</a>
+                            <a href="/react/films">Films</a>
                         </li>
                         <li className="mybutton" id="events">
-                            <a href="/events">Events</a>
+                            <a href="/react/events">Events</a>
                         </li>
                     </ul>
                 </div>
@@ -22,13 +22,13 @@ const Footer = () => {
                     <h3 className="text-lg md:text-xl font-bold mb-2">Connect</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="contact">
-                            <a href="/contact">Contact</a>
+                            <a href="/react/contact">Contact</a>
                         </li>
                         <li className="mybutton" id="socialmedia">
-                            <a href="/socialmedia">Social Media</a>
+                            <a href="/react/socialmedia">Social Media</a>
                         </li>
                         <li className="mybutton" id="newsletter">
-                            <a href="/newsletter">Newsletter</a>
+                            <a href="/react/newsletter">Newsletter</a>
                         </li>
                     </ul>
                 </div>
@@ -36,13 +36,13 @@ const Footer = () => {
                     <h3 className="text-lg md:text-xl font-bold mb-2">About Us</h3>
                     <ul className="list-none">
                         <li className="mybutton" id="mission">
-                            <a href="/mission">Mission</a>
+                            <a href="/react/mission">Mission</a>
                         </li>
                         <li className="mybutton" id="team">
-                            <a href="/team">Team</a>
+                            <a href="/react/team">Team</a>
                         </li>
                         <li className="mybutton" id="partners">
-                            <a href="/partners">Partners</a>
+                            <a href="/react/partners">Partners</a>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+	<style>
+		.monospace {
+			font-family: monospace;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root" class="container mx-auto px-4 lg:px-0">
+		<form id="speakerForm" class="max-w-lg mx-auto">
+			<label for="speaker" class="block text-gray-700 font-bold mb-2">Puhujan nimi</label>
+			<input type="text" id="speaker" name="speaker" placeholder="Enter speaker name" title="Speaker name"
+				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+			<label for="role" class="block text-gray-700 font-bold mb-2 mt-4">Puhujan rooli</label>
+			<input type="text" id="role" name="role" placeholder="Enter speaker role" title="Speaker role"
+				class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+			<button type="submit"
+				class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Päivitä
+				nimet</button>
+		</form>
+	</div>
+	<script type="module" src="./panel.js"></script>
+</body>
+
+</html>

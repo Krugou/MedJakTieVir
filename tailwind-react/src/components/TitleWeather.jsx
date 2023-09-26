@@ -1,17 +1,21 @@
+import {useNavigate} from "react-router-dom";
 import WeatherData from "./WeatherData";
 
 const TitleWeather = () => {
+    const navigate = useNavigate();
+
     return (
         <>
-            <a
-                href="/react/"
-                className="logo text-2xl font-bold mybasetext hover:text-alecharcoal"
+            <button
+                onClick={() => navigate("/")}
+                className="logo text-2xl font-bold mybasetext nav-link hover:text-alecharcoal"
                 id="maintitle"
             >
                 Kirkenes Film Festival
-            </a>
+            </button>
             <WeatherData />
-        </>);
+        </>
+    );
 };
 
 export default TitleWeather;

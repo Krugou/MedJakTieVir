@@ -1,5 +1,6 @@
 import '@videojs/themes/dist/fantasy/index.css';
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import videojs from 'video.js';
 import VideoPlayer from './VideoPlayer.jsx';
 const EventsSection = () => {
@@ -44,6 +45,8 @@ const EventsSection = () => {
       videojs.log('player will dispose');
     });
   };
+  const navigate = useNavigate();
+
   return (
     <section className="border rounded flex flex-col md:flex-row justify-center items-center md:items-start p-4 mb-8">
       <div className="md:w-1/2 m-4">
@@ -55,9 +58,13 @@ const EventsSection = () => {
           <li className="mybasetext text-sm md:text-base mb-2 md:mb-4">Cinema Under the Stars - Enjoy outdoor screenings.</li>
           <li className="mybasetext text-sm md:text-base mb-2 md:mb-4">Film Workshops and Panels - Learn from industry experts.</li>
         </ul>
-        <a href="#" className="mybasetext mybutton py-2 px-4 rounded-md">
+        <button
+          className="nav-link mybasetext mybutton py-2 px-4 rounded-md"
+          onClick={() => navigate('/tickets')}
+        >
+
           See Full Schedule
-        </a>
+        </button>
       </div>
 
 

@@ -1,21 +1,35 @@
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
+
 const Nav = ({isNavOpen}) => {
+    const navigate = useNavigate();
+
     return (
         <nav className={`nav ${isNavOpen ? '' : 'hidden'} md:block`}>
             <ul className="flex flex-col md:flex-row">
                 <li className="mybutton mybasetext" id="about">
-                    <a href="/react/about" className="nav-link ">
+                    <button
+                        className="nav-link"
+                        onClick={() => navigate('/about')}
+                    >
                         About
-                    </a>
+                    </button>
                 </li>
                 <li className="mybutton mybasetext" id="schedule">
-                    <a href="/react/schedule" className="nav-link ">
+                    <button
+                        className="nav-link"
+                        onClick={() => navigate('/schedule')}
+                    >
                         Schedule
-                    </a>
+                    </button>
                 </li>
                 <li className="mybutton mybasetext" id="tickets">
-                    <a href="/react/tickets" className="nav-link ">
+                    <button
+                        className="nav-link"
+                        onClick={() => navigate('/tickets')}
+                    >
                         Tickets
-                    </a>
+                    </button>
                 </li>
             </ul>
         </nav>

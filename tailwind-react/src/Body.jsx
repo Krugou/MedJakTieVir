@@ -18,40 +18,29 @@ import Tickets from './views/Tickets.jsx';
 
 const Body = () => {
   return (
-
     <div className="bg-aleviolet">
-      <Header />
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
+        <Header />
         <Routes>
-          <Route exact path="/react" element={<MainContent />} >
-          </Route>
-          <Route path="/react/about" element={<About />} >
-          </Route>
-          <Route path="/react/schedule" element={<Schedule />} >
-          </Route>
-          <Route path="/react/tickets" element={<Tickets />} >
-          </Route>
-          <Route path="/react/*" element={<NotFound />} >
-          </Route>
-          <Route path="/react/404" element={<NotFound />} >
-          </Route>
-          <Route path="/react/team" element={<Team />} >
-          </Route>
-          <Route path="/react/contact" element={<Contact />} >  </Route>
-          <Route path="/react/socialmedia" element={<SocialMedia />} >  </Route>
-          <Route path="/react/newsletter" element={<Newsletter />} >  </Route>
-          <Route path="/react/mission" element={<Mission />} >  </Route>
-          <Route path="/react/partners" element={<Partners />} >  </Route>
-          <Route path='/react/films' element={<Films />} >  </Route>
-          <Route path='/react/events' element={<Events />} >  </Route>
+          <Route path="/" element={<MainContent />} />
+          <Route path="about" element={<About />} />
+          <Route path="schedule" element={<Schedule />} />
+          <Route path="tickets" element={<Tickets />} />
+          <Route path="team" element={<Team />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="socialmedia" element={<SocialMedia />} />
+          <Route path="newsletter" element={<Newsletter />} />
+          <Route path="mission" element={<Mission />} />
+          <Route path="partners" element={<Partners />} />
+          <Route path='films' element={<Films />} />
+          <Route path='events' element={<Events />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="404" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
-
   );
 };
-
-
 
 export default Body;

@@ -7,7 +7,19 @@ const blokki = document.getElementById("blokki");
 const puhuja = document.getElementById("puhuja");
 const tokablokki = document.getElementById("tokablokki");
 const rooli = document.getElementById("rooli");
-
+const isToggled = nodecg.Replicant("isToggled");
+const lowerthird = document.getElementById("lowerThird");
+console.log(isToggled.value);
+isToggled.on("change", (newValue, oldValue) => {
+    console.log(`myRep changed from ${oldValue} to ${newValue}`);
+    if (newValue === true) {
+        console.log("true");
+        lowerthird.classList.remove("hidden");
+    } else if (newValue === false) {
+        console.log("false");
+        lowerthird.classList.add("hidden");
+    }
+});
 speakerRep.on("change", (newValue, oldValue) => {
     console.log(`myRep changed from ${oldValue} to ${newValue}`);
     puhuja.innerHTML = newValue;

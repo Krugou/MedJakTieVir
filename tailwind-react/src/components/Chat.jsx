@@ -9,7 +9,7 @@ const Chat = ({username}) => {
 
   // Function to handle room changes
   const handleRoomChange = (event) => {
-    console.log('room change happened');
+    // console.log('room change happened');
     const newRoom = event.target.value;
     setRoom(newRoom);
     setMessages([]); // Clear messages when changing rooms
@@ -22,7 +22,7 @@ const Chat = ({username}) => {
 
   // Function to handle message submission
   const handleSubmit = (event) => {
-    console.log('submit worked');
+    // console.log('submit worked');
     event.preventDefault();
     const newMessage = {
       username,
@@ -48,11 +48,11 @@ const Chat = ({username}) => {
   useEffect(() => {
     if (socket) {
       const handleMessage = (data) => {
-        console.log('chat message received:', data);
-        console.log('current room:', room);
+        // console.log('chat message received:', data);
+        // console.log('current room:', room);
         if (data.room === room) {
-          console.log('chat message received in room:', data.room);
-          console.log('current messages:', messages);
+          // console.log('chat message received in room:', data.room);
+          // console.log('current messages:', messages);
           setMessages((prevMessages) => [...prevMessages, data]);
         }
       };

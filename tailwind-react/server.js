@@ -41,6 +41,7 @@ io.on('connection', (socket) => {
         socket.leave(room);
     });
     socket.on('chat message', (data) => {
+        console.log('chat message received:', data);
         if (!lastMessages[data.room]) {
             lastMessages[data.room] = [];
         }
@@ -52,8 +53,10 @@ io.on('connection', (socket) => {
         io.to(data.room).emit('chat message', {message: data.message, username: data.username, room: data.room});
     });
     socket.on('get messages', (room) => {
+        console.log('get messages for room: ', room);
         if (lastMessages[room]) {
             lastMessages[room].forEach((message) => {
+                console.log('message: ', message);
                 socket.emit('chat message', {username: message.username, message: message.message});
             });
         }

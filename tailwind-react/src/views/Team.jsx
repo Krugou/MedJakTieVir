@@ -10,7 +10,7 @@ const Team = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-6">
                 {/* Team Member 1 */}
-                <div className="bg-aledark rounded-lg shadow-md p-4 md:p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-4 md:p-6">
                     <img
                         src="./img/grim.png"
                         alt="Team Member 1"
@@ -21,7 +21,7 @@ const Team = () => {
                 </div>
 
                 {/* Team Member 2 */}
-                <div className="bg-aledark rounded-lg shadow-md p-4 md:p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-4 md:p-6">
                     <img
                         src="./img/dying.png"
                         alt="Team Member 2"
@@ -32,7 +32,7 @@ const Team = () => {
                 </div>
 
                 {/* Team Member 3 */}
-                <div className="bg-aledark rounded-lg shadow-md p-4 md:p-6">
+                <div className="bg-alegreen rounded-lg shadow-md p-4 md:p-6">
                     <img
                         src="./img/stanley.png"
                         alt="Team Member 3"

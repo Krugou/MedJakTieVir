@@ -8,7 +8,7 @@ const TitleWeather = () => {
         <>
             <button
                 onClick={() => navigate("/")}
-                className="logo text-2xl font-bold mybasetext nav-link hover:text-alecharcoal"
+                className="logo text-md md:text-xl font-bold mybasetext nav-link hover:text-alecharcoal"
                 id="maintitle"
             >
                 Kirkenes Film Festival

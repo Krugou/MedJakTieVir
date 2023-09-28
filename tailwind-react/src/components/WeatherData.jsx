@@ -37,15 +37,15 @@ const WeatherData = () => {
     const {temperatureOutput, windSpeedOutput, windDirectionDegreeReversed, weatherCode} = weatherData;
 
     return (
-        <div id="weatherdata" className='flex flex-col md:flex-row'>
+        <div id="weatherdata" className='flex flex-col md:flex-row '>
             <p className="mybasetext">{temperatureOutput}</p>
-            <img src={`./weather/png/${weatherCode}.png`} alt='Weather icon' className='w-6 h-6 bg-white rounded-full p-1 mx-2 inline-block align-middle transform transition duration-500 ease-in-out' />
+            <img src={`./weather/png/${weatherCode}.png`} alt='Weather icon' className='w-6 h-6 bg-white rounded-full p-1 mx-2 my-2 md:my-0 inline-block align-middle transform transition duration-500 ease-in-out' />
             <p className="mybasetext">{windSpeedOutput}</p>
 
             <img
                 src="./png/up-arrow2.png"
                 alt="Wind direction arrow"
-                className="arrow w-6 h-6 bg-white rounded-full p-1 mx-2 inline-block align-middle transform transition duration-500 ease-in-out"
+                className="arrow w-6 h-6 bg-white rounded-full p-1 mx-2 my-2 md:my-0 inline-block align-middle transform transition duration-500 ease-in-out"
                 style={{transform: `rotate(${windDirectionDegreeReversed}deg)`}}
             />
         </div>

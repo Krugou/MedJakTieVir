@@ -8,7 +8,7 @@ const AudioPlayer = ({isAudioPlaying, toggleAudio}) => {
                 Your browser does not support the audio element.
             </audio>
             <button
-                className="p-2 m-4 rounded mybutton mybasetext"
+                className="p-2 m-4 rounded mybutton mybasetext text-md md:text-xl"
                 id="playButton"
                 onClick={toggleAudio}
             >
